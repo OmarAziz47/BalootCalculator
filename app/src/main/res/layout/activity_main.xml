@@ -8,69 +8,68 @@
 
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+
+        />
+
 
     <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="150dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
 
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="#ffff"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/playingcards"/>
 
         <TextView
-            android:id="@+id/text"
-            android:layout_width="205dp"
-            android:layout_height="60dp"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="-100dp"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="16dp"
-            android:textAlignment="center"
-            android:textColor="#ffff"
-            android:textSize="32sp" />
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/appName"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
     </RelativeLayout>
+
 
     // لنا و لهم !!!!!!!!!!
 
     <RelativeLayout
-
         android:id="@+id/relativeLayout"
-        android:layout_width="241dp"
-        android:layout_height="232dp"
-        android:layout_below="@+id/view"
+        android:layout_width="281dp"
+        android:layout_height="262dp"
+        android:layout_below="@+id/relativeLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-22dp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="10dp">
 
         // لنا لنا لنا لنا لنا لنا
 
-
         <TextView
             android:id="@+id/SecLeft"
-            android:layout_width="62dp"
+            android:layout_width="100dp"
+            android:gravity="center_horizontal"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:layout_below="@+id/us"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="-6dp"
-            android:layout_marginLeft="-6dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="92dp"
-            android:layout_marginRight="92dp"
-            android:layout_toStartOf="@+id/SecRight"
-            android:layout_toLeftOf="@+id/SecRight"
-            android:paddingStart="8dp"
-            android:paddingLeft="8dp"
-            android:paddingBottom="20dp"
+            android:layout_marginBottom="25dp"
             android:text="0"
             android:textColor="#808080"
             android:textSize="48dp" />
@@ -78,144 +77,124 @@
         <TextView
 
             android:id="@+id/us"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
+            android:gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="-5dp"
-            android:layout_marginLeft="-5dp"
-            android:layout_marginTop="-2dp"
-            android:paddingStart="6dp"
-            android:paddingLeft="6dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="25dp"
+
+
+            android:layout_marginBottom="25dp"
+
             android:text="لهم"
-            android:textColor="#3B9C9C"
+            android:textColor="@color/colorPrimary"
             android:textSize="25sp" />
 
         <EditText
             android:id="@+id/counter_us"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:layout_below="@+id/SecLeft"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="134dp"
-            android:layout_marginRight="134dp"
-            android:layout_toStartOf="@+id/counter_them"
-            android:layout_toLeftOf="@+id/counter_them"
             android:inputType="number"
-            android:text="0"
+            android:text=""
             android:textColor="#808080" />
 
+        // لنا
         <TextView
             android:id="@+id/them"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="12dp"
-            android:paddingRight="12dp"
-            android:paddingBottom="25dp"
+            android:layout_marginBottom="25dp"
             android:text="لنا"
-            android:textColor="#3B9C9C"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_horizontal"
             android:textSize="25sp" />
 
         <TextView
             android:id="@+id/SecRight"
-            android:layout_width="71dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/them"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="-1dp"
-            android:layout_marginEnd="-13dp"
-            android:layout_marginRight="-13dp"
-            android:paddingEnd="8dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="20dp"
+
+            android:gravity="center_horizontal"
             android:text="0"
+            android:textAlignment="center"
             android:textColor="#808080"
             android:textSize="48dp" />
 
         <EditText
             android:id="@+id/counter_them"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/SecRight"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
+
             android:inputType="number"
-            android:text="0"
+            android:gravity="center_horizontal"
+            android:text=""
             android:textColor="#808080" />
 
+        <Button android:layout_alignParentBottom="true"
+            android:id="@+id/Button1"
+            android:layout_width="130dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:onClick="enter"
+            android:text="سجل"
+            android:textAlignment="center"
+            android:textColor="#ffff"
+            android:textSize="25sp"
+             />
 
     </RelativeLayout>
 
-    <!--android:onClick="enter"-->
-
-    <!--android:onClick="back"-->
-
-
-    <!-- c-->
 
     <ScrollView
 
         android:id="@+id/ScrollDown1"
         android:layout_centerHorizontal="true"
-        android:layout_width="214dp"
-        android:layout_height="271dp"
+        android:layout_width="271dp"
+        android:layout_height="211dp"
         android:layout_below="@+id/relativeLayout"
-        android:layout_marginTop="122dp"
+        android:layout_marginTop="20dp"
         android:background="#ffff"
         >
 
         <RelativeLayout
-            android:layout_width="214dp"
-            android:layout_height="271dp"
+            android:layout_width="271dp"
+            android:layout_height="211dp"
             >
 
         <TextView
-            android:id="@+id/them1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/SecRight2"
+            android:layout_width="80dp"
+            android:paddingTop="5dp"
+            android:layout_height="30dp"
+            android:gravity="center"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginRight="3dp"
-            android:paddingLeft="12dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="12dp"
-            android:paddingRight="12dp"
-            android:paddingBottom="20dp"
             android:text="0"
             android:textColor="#808080"
-            android:textSize="25dp" />
+            android:textSize="25dp"/>
 
         <TextView
-            android:id="@+id/SecRight2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:layout_marginLeft="15dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="12dp"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:layout_marginRight="15dp"
-            android:paddingBottom="20dp"
+            android:id="@+id/SecLeft2"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:paddingTop="5dp"
             android:text="0"
             android:textColor="#808080"
             android:textSize="25dp"
@@ -223,30 +202,10 @@
 
 
     </RelativeLayout>
+
 </ScrollView>
 
-    <Button
-        android:id="@+id/Button1"
-        android:layout_width="130dp"
-        android:layout_height="44dp"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="114dp"
-        android:layout_marginLeft="114dp"
-        android:layout_marginTop="53dp"
-        android:background="#3B9C9C"
 
-        android:gravity="center_horizontal"
-        android:onClick="enter"
-        android:paddingTop="8dp"
-        android:text="سجل"
-        android:textAlignment="center"
-        android:textColor="#ffff"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <RelativeLayout
@@ -254,39 +213,33 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/ScrollDown1"
-        android:layout_marginTop="15dp">
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:background="#808080"
-        android:onClick="back"
-        android:paddingTop="8dp"
-        android:text="تراجع"
-        android:textColor="#ffff"
-        android:textSize="15sp"
-       />
-
-        <Button
-            android:id="@+id/reset_button"
-            android:layout_width="62dp"
+        android:layout_marginTop="20dp">
+         <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="102dp"
-            android:layout_marginEnd="206dp"
-            android:layout_marginRight="206dp"
-            android:layout_marginBottom="0dp"
-            android:layout_toStartOf="@+id/button"
-            android:layout_toLeftOf="@+id/button"
-            android:background="#000"
-            android:onClick="reset"
-            android:paddingTop="8dp"
-            android:text="طقة جديدة"
-            android:textAlignment="center"
-            android:textColor="#ffff" />
+             android:gravity="center"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentRight="true"
+            android:onClick="back"
+            android:text="تراجع"
+            android:textColor="#ffff"
+            android:textSize="15sp"
+            android:background="@drawable/round_button"
+            />
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:onClick="reset"
+                android:text="طقة جديدة"
+                android:textColor="#ffff"
+                android:textSize="15sp"
+                android:background="@drawable/round_button"
+                />
 
      </RelativeLayout>
 

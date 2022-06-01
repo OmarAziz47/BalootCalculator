@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BalootCalculater</string>
+
+    <string name="appName"><b>بس، كاشت!</b></string>
 </resources>
