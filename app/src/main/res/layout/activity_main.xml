@@ -18,13 +18,37 @@
         />
 
 
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="62dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginTop="20dp"-->
+
+<!--        >-->
+<!--        <Button-->
+<!--            android:id="@+id/buttonClickHere"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:text="أضغط هنا"-->
+<!--            android:onClick="clickhere"-->
+<!--            android:textColor="#ffff"-->
+<!--            android:textSize="12sp"-->
+<!--            android:background="@drawable/round_button"-->
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="150dp"
         android:layout_height="145dp"
         android:layout_below="@+id/relativeLayout2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="25dp">
 
         <ImageView
             android:id="@+id/appIcon"
@@ -41,6 +65,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginTop="10dp"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="@string/appName"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp" />
@@ -51,12 +76,13 @@
     // لنا و لهم !!!!!!!!!!
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="281dp"
-        android:layout_height="262dp"
+        android:id="@+id/RelativeLayout"
+        android:layout_width="300dp"
+        android:layout_height="320dp"
         android:layout_below="@+id/relativeLayout1"
+        android:background="@drawable/round_button_second_color"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="25dp">
 
         // لنا لنا لنا لنا لنا لنا
 
@@ -78,7 +104,8 @@
 
             android:id="@+id/us"
             android:layout_width="100dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -86,7 +113,6 @@
 
 
             android:layout_marginBottom="25dp"
-
             android:text="لهم"
             android:textColor="@color/colorPrimary"
             android:textSize="25sp" />
@@ -110,6 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
             android:text="لنا"
             android:textColor="@color/colorPrimary"
@@ -123,8 +150,8 @@
             android:layout_below="@+id/them"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-
             android:gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
             android:text="0"
             android:textAlignment="center"
             android:textColor="#808080"
@@ -137,7 +164,6 @@
             android:layout_below="@+id/SecRight"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="30dp"
 
             android:inputType="number"
             android:gravity="center_horizontal"
@@ -154,51 +180,72 @@
             android:onClick="enter"
             android:text="سجل"
             android:textAlignment="center"
+            android:layout_marginBottom="25dp"
             android:textColor="#ffff"
             android:textSize="25sp"
              />
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/rel3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/RelativeLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_button_second_color"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="آخر نتيجة"
+            android:textColor="#808080"
+            android:textSize="20dp" />
+    </RelativeLayout>
 
     <ScrollView
 
         android:id="@+id/ScrollDown1"
         android:layout_centerHorizontal="true"
-        android:layout_width="271dp"
-        android:layout_height="211dp"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_marginTop="20dp"
-        android:background="#ffff"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/rel3"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_button_second_color"
         >
 
+
         <RelativeLayout
-            android:layout_width="271dp"
-            android:layout_height="211dp"
+            android:id="@+id/Rel1"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
             >
 
-        <TextView
-            android:id="@+id/SecRight2"
-            android:layout_width="80dp"
-            android:paddingTop="5dp"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:text="0"
-            android:textColor="#808080"
-            android:textSize="25dp"/>
+            <TextView
+                android:id="@+id/SecRight2"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="0"
+                android:textColor="#808080"
+                android:textSize="25dp"/>
 
-        <TextView
-            android:id="@+id/SecLeft2"
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:paddingTop="5dp"
-            android:text="0"
-            android:textColor="#808080"
-            android:textSize="25dp"
-            />
+            <TextView
+                android:id="@+id/SecLeft2"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#808080"
+                android:textSize="25dp" />
 
 
     </RelativeLayout>
@@ -213,7 +260,7 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/ScrollDown1"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="25dp">
          <Button
             android:id="@+id/button"
             android:layout_width="100dp"
@@ -235,7 +282,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:onClick="reset"
-                android:text="طقة جديدة"
+                android:text="صكة جديدة"
                 android:textColor="#ffff"
                 android:textSize="15sp"
                 android:background="@drawable/round_button"

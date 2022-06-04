@@ -85,8 +85,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="03dac5" />
+                                      <entry key="backgroundColor" value="05a18f" />
                                       <entry key="foregroundImage" value="D:\Downloads\playing-card.png" />
+                                      <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
                                 </PersistentState>
